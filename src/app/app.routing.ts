@@ -3,12 +3,17 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
+
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: '/dashboard',
     pathMatch: 'full',
   }, {
     path: '',
@@ -16,19 +21,19 @@ const routes: Routes =[
     children: [{
       path: '',
       loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
-    }]
+    },
+    
+  ]
   }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
-    RouterModule.forRoot(routes,{
-       useHash: true
-    })
+    RouterModule.forRoot(routes)
   ],
-  exports: [
+  exports: [RouterModule
   ],
+  declarations: []
 })
 export class AppRoutingModule { }
