@@ -11,6 +11,7 @@ export const ROUTES: RouteInfo[] = [
   { path: '/create', title: 'create',  icon:'person', class: '' },
   { path: '/list-user', title: 'List User',  icon:'content_paste', class: '' },
   
+  
     
 ];
 
