@@ -1,0 +1,32 @@
+<div class="main-content">
+    <div class="container-fluid">
+  <form [formGroup]="pakaianForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="mb-3">
+        <label>Nama</label>
+        <input type="text" formControlName="Nama" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Kontak</label>
+        <input type="text" formControlName="Kontak" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Alamat</label>
+        <input type="text" formControlName="Alamat" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label>Model</label>
+        <input type="text" formControlName="Model" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Ukuran</label>
+        <input type="text" formControlName="Ukuran" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary" [disabled]="!pakaianForm.valid">Create</button>
+      </div>
+      </form>

@@ -13,7 +13,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 const routes: Routes =[
   {
     path: '',
-    redirectTo: '/create',
+    redirectTo: '/create-pakaian',
     pathMatch: 'full',
   }, {
     path: '',

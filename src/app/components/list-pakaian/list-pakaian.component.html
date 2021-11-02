@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="container-fluid">
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nama</th>
+          <th scope="col">Kontak</th>
+          <th scope="col">Alamat</th>
+          <th scope="col">Model</th>
+          <th scope="col">Ukuran</th>
+
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pakaian of Pakaians; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ pakaian.Nama }}</td>
+          <td>{{ pakaian.Kontak }}</td>
+          <td>{{ pakaian.Alamat }}</td>
+          <td>{{ pakaian.Model }}</td>
+          <td>{{ pakaian.Ukuran }}</td>
+          <td>
+            <span (click)="removePakaian(pakaian)" class="text-danger">Delete</span> &nbsp;
+            <span routerLink="/update-pakaian/{{pakaian.id}}" class="text-primary">Edit</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>

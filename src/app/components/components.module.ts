@@ -9,6 +9,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreatePakaianComponent } from './create-pakaian/create-pakaian.component';
+import { ListPakaianComponent } from './list-pakaian/list-pakaian.component';
+import { EditPakaianComponent } from './edit-pakaian/edit-pakaian.component';
 
 @NgModule({
   imports: [
@@ -23,7 +26,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SidebarComponent,
     CreateUserComponent,
     ListUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    CreatePakaianComponent,
+    ListPakaianComponent,
+    EditPakaianComponent
   ],
   exports: [
     FooterComponent,
